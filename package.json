@@ -1,0 +1,70 @@
+{
+	"name": "n8n-nodes-parse-conversiontools",
+	"version": "1.0.0",
+	"description": "n8n community node for Parse by Conversion Tools - extract structured data from invoices, receipts, bank statements and other documents",
+	"keywords": [
+		"n8n-community-node-package",
+		"n8n",
+		"parse",
+		"document-extraction",
+		"invoice",
+		"receipt",
+		"bank-statement",
+		"ocr",
+		"pdf",
+		"json"
+	],
+	"license": "MIT",
+	"homepage": "https://parse.conversiontools.io",
+	"author": {
+		"name": "Conversion Tools",
+		"email": "info@conversiontools.io"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/conversiontools/n8n-nodes-parse-conversiontools.git"
+	},
+	"bugs": {
+		"url": "https://github.com/conversiontools/n8n-nodes-parse-conversiontools/issues"
+	},
+	"engines": {
+		"node": ">=18.10",
+		"pnpm": ">=9.1"
+	},
+	"packageManager": "pnpm@9.1.4",
+	"main": "dist/nodes/Parse/Parse.node.js",
+	"scripts": {
+		"preinstall": "npx only-allow pnpm",
+		"build": "tsc && gulp build:icons",
+		"dev": "tsc --watch",
+		"format": "prettier nodes credentials --write",
+		"lint": "eslint nodes credentials",
+		"lintfix": "eslint nodes credentials --fix",
+		"prepublishOnly": "pnpm build && pnpm lint"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"credentials": [
+			"dist/credentials/ParseApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/Parse/Parse.node.js"
+		]
+	},
+	"devDependencies": {
+		"@types/node": "^22.10.0",
+		"@typescript-eslint/parser": "^8.54.0",
+		"eslint": "^9.39.2",
+		"eslint-plugin-n8n-nodes-base": "^1.16.6",
+		"gulp": "^5.0.1",
+		"n8n-workflow": "^2.7.0",
+		"prettier": "^3.8.1",
+		"typescript": "^5.7.2"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}
