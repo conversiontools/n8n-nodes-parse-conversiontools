@@ -1,6 +1,6 @@
 # n8n-nodes-parse-conversiontools
 
-An [n8n](https://n8n.io) community node for [Parse by Conversion Tools](https://parse.conversiontools.io) - extract structured data from invoices, receipts, bank statements, purchase orders, bills of lading and other documents.
+An [n8n](https://n8n.io) community node for [Parse by Conversion Tools](https://parse.conversiontools.io/integrations/n8n) - extract structured data from invoices, receipts, bank statements, purchase orders, bills of lading and other documents.
 
 Define the fields once. Every document of that type comes back in the same shape, so the rest of your workflow can rely on it.
 
@@ -93,6 +93,7 @@ Parse (Extract Document, Wait = off) → ... → Parse (Get Extraction) when the
 
 ## Resources
 
+- [Parse for n8n](https://parse.conversiontools.io/integrations/n8n) - setup walkthrough and example workflows
 - [Parse documentation](https://parse.conversiontools.io/docs/quickstart)
 - [API reference](https://parse.conversiontools.io/docs/api/extract)
 - [Use cases](https://parse.conversiontools.io/use-cases)
